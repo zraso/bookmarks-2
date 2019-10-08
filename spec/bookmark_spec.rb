@@ -19,7 +19,7 @@ describe Bookmark do
   end
   describe '.add_bookmark' do
     it 'creates a new bookmark' do
-      Bookmark.add_bookmark(url: 'google.com')
+      Bookmark.create(url: 'google.com')
       expect(Bookmark.all).to include 'google.com'
     end
   end
