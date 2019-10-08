@@ -7,12 +7,9 @@ end
 
 feature 'Viewing all bookmarks' do
   scenario 'visiting the bookmarks page' do
-    connection = PG.connect(dbname: 'bookmark_manager_test')
-
-    #add the test data
-    connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com');")
-    connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.ebay.co.uk');")
-    connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.google.co.uk');")
+    Bookmark.add_bookmark(url: "http://www.makersacademy.com")
+    Bookmark.add_bookmark(url: "http://www.ebay.co.uk")
+    Bookmark.add_bookmark(url: "http://www.google.co.uk")
 
     visit('/bookmarks')
 
