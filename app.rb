@@ -3,9 +3,9 @@ require './lib/bookmark'
 
 class BookmarkManager < Sinatra::Base
   enable :sessions, :method_override
-  
+
   get '/' do
-    'Bookmark Manager'
+    erb :index
   end
 
   get '/bookmarks' do
