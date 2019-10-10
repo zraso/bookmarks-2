@@ -4,6 +4,6 @@ feature 'add bookmark' do
     fill_in('url', with: 'google.com')
     fill_in('title', with: 'Test Bookmark')
     click_button 'Submit'
-    expect(page).to have_link('Test Bookmark', href: 'google.com')
+    expect(page).to have_link('Test Bookmark', href: 'http://google.com') ###
   end
 end
