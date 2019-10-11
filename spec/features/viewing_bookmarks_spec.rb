@@ -7,9 +7,9 @@ end
 
 feature 'Viewing all bookmarks' do
   scenario 'visiting the bookmarks page' do
-    Bookmark.create(url: "www.makersacademy.com", title: 'Makers Academy')
-    Bookmark.create(url: "www.ebay.co.uk", title: "Ebay is great")
-    Bookmark.create(url: "www.google.co.uk", title: "Googles aight")
+    Bookmark.create(url: "http://www.makersacademy.com", title: 'Makers Academy')
+    Bookmark.create(url: "http://www.ebay.co.uk", title: "Ebay is great")
+    Bookmark.create(url: "http://www.google.co.uk", title: "Googles aight")
 
     visit('/bookmarks?')
 
